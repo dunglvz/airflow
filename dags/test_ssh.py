@@ -17,6 +17,6 @@ with DAG(
     ssh_task = SSHOperator(
         task_id="ssh_to_server_and_run_commands",
         ssh_conn_id="172.16.5.12",
-        command="ls -l && pwd",
+        command="ls -l && pwd && echo 'SSH command executed successfully!'",
         do_xcom_push=True,
     )
